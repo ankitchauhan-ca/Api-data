@@ -15,7 +15,7 @@ const readData = () => {
   return JSON.parse(data);
 };
 
-app.get("/api/data", (req, res) => {
+app.get("/api/data/page/:pageNumber", (req, res) => {
   const page = parseInt(req.params.pageNumber) || 1;
   const pageSize = 10;
   const data = readData();
